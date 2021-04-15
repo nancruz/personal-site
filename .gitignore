@@ -60,10 +60,7 @@ typings/
 .env.*
 !.env.example
 
-.cache
-**/.cache
-public
-
+.next
 .idea
 .vscode
 .DS_Store
