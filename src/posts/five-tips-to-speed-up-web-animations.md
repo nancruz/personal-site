@@ -7,10 +7,10 @@ tags:
   - CSS
   - HTML
   - Performance
-banner: ./header.jpg
 ---
 *Note: This post was originally posted in [Feedzai Techblog](https://medium.com/feedzaitech/5-tips-to-speed-up-your-web-application-animations-2086bdaff04e?source=friends_link&sk=a3c2706a0fffaa0e4dd29255950e603a)*
 
+![Header image](/header.jpg)
 When building an application, developers and designers often use animations to provide the most impressive user experience. While strong animation can enhance your users' overall experiences, a clumsy one can cause headaches and lead to abandonment. Following best practices can help you avoid some common animation pitfalls.
 
 So how do animations work? With the introduction of new web technologies along with new design trends, animations are getting more advanced and complex. Those animations are, to some extent, done by applying complex CSS rules or using JavaScript logic such as adding or removing nodes from the DOM. However, this complexity comes at a cost. If animations undergo a clumsy implementation, the final result could be a slow and sluggish web page, especially for users with low-end devices.
@@ -32,7 +32,7 @@ What happens if the browser is unable to render a frame within the 10ms budget? 
 
 # Maintain the pixel pipeline
 
-![Figure 1](./pixel_pipeline.png)
+![Figure 1](/pixel_pipeline.png)
 *Figure 1 - Pixel pipeline.*
 
 When you visit a webpage, the browser downloads a set of different files (including media and JavaScript files) required to render the page. From the moment it gets the files to the final pixels on the screen, the browser goes through a process called pixel pipeline. The **pixel pipeline** involves five different steps:
@@ -70,7 +70,7 @@ When it comes to creating CSS class names, one of the recommendations from the c
 
 To better understand what was described before, imagine a scenario where we need to style a set of elements that look like boxes. In the design specification, there's a rule that says: "each odd box should have a right margin of 10px, while each even box should have 5px instead". The image below describes the final goal.
 
-![Figure 2](./selector-complexity.png)
+![Figure 2](/selector-complexity.png)
 _Figure 2 - Different margins between boxes using same css class name._
 
 The above example can be easily accomplished with the following CSS rules:
@@ -84,7 +84,7 @@ The problem with this approach is that the _:nth-child_ CSS [pseudo-class](http
 
 As mentioned before, a possible solution is to create specific CSS classes to reduce the selector complexity.
 
-![Figure 3](./selector.png)
+![Figure 3](/selector.png)
 _Figure 3- Different margins between boxes using different css class name._
 
 For this particular example, we can achieve the same result with:
@@ -112,10 +112,10 @@ Example 2: https://codesandbox.io/s/animations-blog-post-slide-animation-no-laye
 
 To actually compare the difference between the two implementations, we took two snapshots from the available Performance tab in Chrome's dev tool, one for each example.
 
-![Figure 4](./animation-layers-overview.png)
+![Figure 4](/animation-layers-overview.png)
 _Figure 4- Pixel pipeline from example 1._
 
-![Figure 5](./animation-no-layers-main.png)
+![Figure 5](/animation-no-layers-main.png)
 _Figure 5- Pixel pipeline from example 2._
 
 If we compare Figure 1 and Figure 2, we can clearly see the difference in the pixel pipeline execution between both implementations. In the first case, we skip the expensive __Layout__ and __Paint__ steps from the pipeline while in the last case we go through all the steps.

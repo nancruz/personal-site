@@ -1,0 +1,4 @@
+.postTitle a {
+    font-weight: 300;
+    color: var(--theme-ui-colors-text);
+}

@@ -9,10 +9,10 @@ tags:
   - D3.js
   - Cypress
   - E2E Testing
-banner: ./cypress-genome.jpg
 ---
 *Note: This post was originally posted in [Feedzai Techblog](https://medium.com/feedzaitech/using-cypress-to-test-genome-graph-built-with-canvas-d3-js-and-react-122a53042dd2?source=friends_link&sk=220af264139326ea72f2f4fcdd7d3380)*
 
+![Header](/cypress-genome.jpg)
 
 Genome, like any other Feedzai product, is subject to an exhaustive battery of end-to-end (E2E) tests to ensure it works according to its design specifications. Since Genome is a highly visual tool, testing requires a very particular approach. We build the graph area using an HTML canvas element, which prevents us from using conventional E2E techniques.
 In this blog post, we'll explain how we approached and solved the problem of testing an application whose main interactions occur on a canvas element.
@@ -32,10 +32,10 @@ Genome's graph is built using a combination of React and D3.js. A React componen
 D3.js is a well-known library that is used to help build visualization tools. With Genome, by default, we use the D3.js force-directed graph layout. This layout simulates physical forces on nodes until they balance (their final position). Visually speaking, the more simulations, the more the nodes tend to separate from each other, while fewer simulations might make them stay closer to each other. Figure 1 illustrates a scenario where the number of simulations is greater than the one in Figure 2.
 Figure 1. D3.js force simulation with around 300 iterations. As explained, in this case, the nodes are slightly apart from each other when compared with the graph in Figure 2.Figure 2. D3.js force simulation with around 13 iterations.
 
-![Figure 1](./graph-300-iterations.png)
+![Figure 1](/graph-300-iterations.png)
 *Figure 1. D3.js force simulation with around 300 iterations. As explained, in this case, the nodes are slightly apart from each other when compared with the graph in Figure 2.*
 
-![Figure 2](./graph-13-iterations.png)
+![Figure 2](/graph-13-iterations.png)
 *Figure 2. D3.js force simulation with around 13 iterations.*
 
 

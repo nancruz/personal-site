@@ -3,7 +3,7 @@ import styles from './Index.module.css';
 
 export default function Home() {
     return (
-        <Layout>
+        <Layout pageTitle="Nuno's Personal Website">
             <section>
                 <h1 className={styles.greeting}>Hi I'm Nuno 👋</h1>
                 <p className={styles.paragraph}>I'm a Frontend Engineer based in Lisbon 🇵🇹.</p>

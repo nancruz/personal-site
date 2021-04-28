@@ -1,0 +1,4 @@
+.postMetadata,
+.postMetadata a {
+    color: var(--theme-ui-colors-secondary);
+}
