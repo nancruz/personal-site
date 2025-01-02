@@ -1,8 +1,9 @@
 module.exports = {
-  target: 'serverless',
-  webpack: function (config) {
-    config.module.rules.push({ test: /\.md$/, use: 'raw-loader' });
+    output: "standalone",
+    swcMinify: true,
+    webpack: function (config) {
+        config.module.rules.push({ test: /\.md$/, use: "raw-loader" });
 
-    return config;
-  }
+        return config;
+    },
 };
