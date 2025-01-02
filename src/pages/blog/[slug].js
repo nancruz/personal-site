@@ -32,7 +32,7 @@ const components = {
             <SyntaxHighlighter style={atomDark} language={match[1]} showLineNumbers children={String(children).replace(/\n$/, '')} {...props} />
         ) : (
             <code className={className} {...props} />
-        )
+        );
     }
 }
 

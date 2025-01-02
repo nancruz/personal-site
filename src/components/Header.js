@@ -13,7 +13,7 @@ const pages = [
 ];
 
 function LinkListItem({ name, link }) {
-    return <Link href={link}><a className={styles.navigationItem}>{name}</a></Link>;
+    return <Link href={link} className={styles.navigationItem}>{name}</Link>;
 }
 
 function LinkList({items}) {
@@ -27,14 +27,14 @@ function LinkList({items}) {
 
 export default function Header() {
     return (
-        <header className={styles.header}>
+        (<header className={styles.header}>
             <div>
-                <Link href='/'><a className={styles.logo}><h1>Nuno Cruz</h1></a></Link>
+                <Link href='/' className={styles.logo}><h1>Nuno Cruz</h1></Link>
             </div>
             <div className={styles.navigation}>
                 <LinkList key='pages' items={pages} />
                 <LinkList key='social' items={socialLinks} />
             </div>
-        </header>
+        </header>)
     );
 }

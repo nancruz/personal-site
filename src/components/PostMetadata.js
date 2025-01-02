@@ -11,18 +11,16 @@ function formatTs(ts) {
 }
 
 function Tags({ tags = []}) {
-    return (
-        tags.map((tag, index) => {
-            const isLastTag = index + 1 === tags.length;
+    return (tags.map((tag, index) => {
+        const isLastTag = index + 1 === tags.length;
 
-            return (
-                <span key={tag}>
-                    <Link href={`/tags/${tag}`}>{tag}</Link>
-                    {!isLastTag && ', '}
-                </span>
-            );
-        })
-    );
+        return (
+            (<span key={tag}>
+                <Link href={`/tags/${tag}`} legacyBehavior>{tag}</Link>
+                {!isLastTag && ', '}
+            </span>)
+        );
+    }));
 }
 
 export default function PostMetadata({ tags = [], date }) {
