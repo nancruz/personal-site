@@ -1,15 +1,28 @@
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import Link from "next/link";
+import Layout from "../components/Layout";
 
 export default function About() {
     return (
         <Layout pageTitle="About | Nuno Cruz">
             <h1>About</h1>
-            <p>I'm Nuno and I'm a Frontend Engineer working at <a href='https://www.sky.com' target='_blank' rel='noopener'>Sky</a>.</p>
-            <p>With more than 5+ years of experience building products with JavaScript, I'm currently helping my team building <a href='https://www.peacocktv.com' target='_blank' rel='noopener'>Peacock</a> 🦚 - the best streaming platform.</p>
-            <p>Previously, I spent 4 years at <a href='https://feedzai.com' target='_blank' rel='noopener'>Feezai</a> helping building fraud prevention tools to help fraud investigators and analysts to find and visualize complex financial crime patterns tools using technologies like React, D3.js or canvas.</p>
-            <p>When not building stuff, I'm probably at the gym 🏋️‍♂️, running 🏃‍♂, reading 📖 or taking photos 📸.</p>
-            <p>For more information about my professional experience, please check my <Link href='/resume.pdf'>resume</Link>.</p>
+            <p>
+                I’m an engineering manager at Sky, where I help build apps like
+                Peacock, SkyShowtime, and Showmax. I currently lead one of the
+                teams responsible for the TV devices, working on bringing the
+                magic of entertainment to your screen.
+            </p>
+            <p>
+                Before stepping into management, I spent seven years as a
+                frontend engineer, with five of those years at Feedzai. There, I
+                worked on creating fraud prevention tools that helped
+                investigators and analysts uncover complex financial crime
+                patterns—basically, making bad guys' lives a little harder.
+            </p>
+            <p>
+                When I’m not working, you can usually find me with a book in
+                hand, breaking a sweat at the gym, exploring new cuisines, or
+                planning my next adventure.
+            </p>
         </Layout>
     );
 }
