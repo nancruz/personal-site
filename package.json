@@ -23,5 +23,8 @@
     "file-loader": "^6.2.0",
     "gray-matter": "^4.0.2",
     "raw-loader": "^4.0.2"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
